@@ -10,7 +10,7 @@
    */
 
   --raw-seinna: hsl(24, 74%, 58%);
-  --sizzling-sunrise: hsl(51, 95%, 54%);
+  --sizzling-sunrise: hsl(51, 100%, 56%);
   --scarlet: hsl(13, 96%, 47%);
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
@@ -71,6 +71,9 @@ body.dark_theme {
   --color-secondary: hsl(0, 0%, 62%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: hsl(0, 0%, 16%);
+  --btn-color: rgb(84, 84, 84);
+  --btn-active: black;
+
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
 
@@ -78,12 +81,14 @@ body.dark_theme {
 
 body.light_theme {
 
-  --bg-primary: hsl(0, 0%, 90%);
+  --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 100%);
   --color-primary: hsl(0, 0%, 12%);
   --color-secondary: hsl(0, 0%, 37%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
   --input-bg: hsl(0, 0%, 93%);
+  --btn-color: rgb(172, 172, 172);
+  --btn-active: rgb(120, 119, 119);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
 
@@ -332,12 +337,12 @@ body.active { overflow: hidden; }
 .theme-btn {
   padding: 4px;
   width: 48px;
-  background: var(--bg-secondary);
+  background: var(--btn-color);
   border-radius: 100px;
   transition: var(--transition-1);
 }
 
-.header.active .theme-btn { background: var(--bg-primary); }
+.header.active .theme-btn { background: var(--btn-active); }
 
 .theme-btn .icon {
   position: relative;
@@ -452,6 +457,10 @@ body.active { overflow: hidden; }
 
 main { overflow-x: hidden; }
 
+
+
+
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -487,6 +496,8 @@ main { overflow-x: hidden; }
 
 
 }
+
+
 
 
 
@@ -1058,11 +1069,12 @@ textarea.input-field {
     left: 0;
     transform: rotate(0.75turn) translateX(-100%);
     transform-origin: left top;
+    font-size: 1.3em;
     margin-bottom: 0;
   }
 
   .section-subtitle::after {
-    top: 8px;
+    top: 10px;
     left: auto;
     right: calc(100% + 20px);
   }
@@ -1151,8 +1163,8 @@ textarea.input-field {
     content: "";
     position: absolute;
     bottom: -40px;
-    left: 13px;
-    width: 2px;
+    left: 15px;
+    width: 4px;
     height: 30px;
     background: var(--color-secondary);
   }
@@ -1162,7 +1174,7 @@ textarea.input-field {
     color: var(--color-secondary);
     margin-block: 5px;
     padding: 5px;
-    font-size: 18px;
+    font-size: 1.9rem;
     transition: var(--transition-1);
   }
 
@@ -1184,10 +1196,10 @@ textarea.input-field {
   .scroll-down {
     display: block;
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     right: -30px;
     color: var(--color-secondary);
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     transform: rotate(90deg);
     transform-origin: top right;
@@ -1199,7 +1211,7 @@ textarea.input-field {
     top: 8px;
     right: -50px;
     width: 30px;
-    height: 2px;
+    height: 4px;
     background: var(--color-secondary);
   }
 
